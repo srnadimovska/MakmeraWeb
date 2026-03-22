@@ -1,0 +1,67 @@
+.footerDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    gap:20px;
+    padding: 20px;
+    background: linear-gradient(90deg, #708fd8 0%, #182848 100%);
+  color: white;
+  padding: 10px 20px;
+    
+}
+.logoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    
+
+}
+.logoMakmera img{
+    width: 250px;
+    height:auto;
+}
+
+.logoDiv img{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: transform 0.2s ease;
+}
+.logoDiv a:hover{
+    
+  transform: scale(1.1);
+}
+.footerContact {
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.footerContact h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.footerContact p {
+  font-size: 0.95rem;
+  margin: 3px 0;
+  color: #cccccc;
+}
+
+.footerContact strong {
+  color: #ffffff;
+}
+
+.footerContact a {
+  color: #ffd700; /* subtle gold accent */
+  text-decoration: none;
+}
+
+.footerContact a:hover {
+  text-decoration: underline;
+}

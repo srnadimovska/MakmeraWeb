@@ -1,0 +1,20 @@
+.rootWrapper {
+ margin-top: 100px;
+  /* width: 1300px; */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color:white;
+  /* padding: 20px; */
+  
+  
+}
+
+
+.pageWrapper {
+  flex: 1;                
+  /* width: 100%;      */
+  margin: o auto;        
+  padding: 80px 20px 20px;        
+  box-sizing: border-box;
+  
+  
+}
