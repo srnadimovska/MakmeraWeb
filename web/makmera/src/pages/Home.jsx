@@ -23,7 +23,7 @@ function Home() {
 >
   <div className={styles.heroOverlay}>
     <div className={styles.heroContent}>
-      <h1>Precision weighing solutions since 1988</h1>
+      <h1>Precision weighing solutions since 1996</h1>
       <p>Industrial • Medical • Laboratory • Logistics</p>
 
       <div className={styles.heroButtons}>
