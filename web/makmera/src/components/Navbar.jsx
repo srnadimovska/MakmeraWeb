@@ -6,27 +6,27 @@ import styles from "./Navbar.module.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // const [productsOpen, setProductsOpen] = useState(false);
+  // const dropdownRef = useRef(null);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 50);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setProductsOpen(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (e) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+  //       setProductsOpen(false);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => 
-      document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => 
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   return (
     <header
@@ -56,66 +56,27 @@ function Navbar() {
         </div>
 
         {/* NAV LINKS */}
-        <nav
-          className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}
-        >
-          {/* DROPDOWN */}
-          <div
-            ref={dropdownRef}
-            className={styles.dropdown}
-            onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={(e) => {
-              if (!e.currentTarget.contains(e.relatedTarget)) {
-                setProductsOpen(false);
-              }
-            }}
-          >
-            <Link
-              to="/products"
-              className={styles.dropdownTrigger}
-              onClick={() => {
-                setMenuOpen(false);
-                setProductsOpen(false);
-              }}
-            >
-              PRODUCTS
-              <span
-                className={`${styles.arrow} ${
-                  productsOpen ? styles.arrowOpen : ""
-                }`}
-              >
-                ▾
-              </span>
-            </Link>
+        <nav className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}>
+  <Link to="/products" onClick={() => setMenuOpen(false)}>
+    PRODUCTS
+  </Link>
 
-            <div
-              className={`${styles.dropdownContent} ${
-                productsOpen ? styles.dropdownShow : ""
-              }`}
-            >
-              <Link to="products/retail" onClick={() => setProductsOpen(false)}>
-                Retail
-              </Link>
-              <Link
-                to="products/truckscales"
-                onClick={() => setProductsOpen(false)}
-              >
-                Truck Scales
-              </Link>
-              <Link
-                to="products/industrial"
-                onClick={() => setProductsOpen(false)}
-              >
-                Industrial Solutions
-              </Link>
-            </div>
-          </div>
+  <Link to="/projects" onClick={() => setMenuOpen(false)}>
+    PROJECTS
+  </Link>
 
-          <Link to="/projects">PROJECTS</Link>
-          <Link to="/service">SERVICE</Link>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/contact">CONTACT</Link>
-        </nav>
+  <Link to="/service" onClick={() => setMenuOpen(false)}>
+    SERVICE
+  </Link>
+
+  <Link to="/about" onClick={() => setMenuOpen(false)}>
+    ABOUT
+  </Link>
+
+  <Link to="/contact" onClick={() => setMenuOpen(false)}>
+    CONTACT
+  </Link>
+</nav>
       </div>
     </header>
   );

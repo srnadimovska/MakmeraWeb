@@ -63,7 +63,7 @@ function Contact() {
           <div className={styles.location}>
             <strong>Strumica - Office & Service</strong>
             <p>Kliment Ohridski 104, 2400 Strumica</p>
-            <p>✉ <a href="mailto:vane@makmera.com.mk">vane@makmera.com.mk</a></p>
+            <p>✉ <a href="mailto:vane@yahoo.">vane@makmera.com.mk</a></p>
             <h4>+00389 75 253 023</h4>
           </div>
         </div>
